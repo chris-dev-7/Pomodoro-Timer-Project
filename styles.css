@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes gradient-animation {
+  0% {
+      background: rgb(255, 106, 26);
+  }
+  25% {
+      background: rgb(199, 60, 0);
+  }
+  50% {
+      background: rgb(253, 73, 18);
+  }
+  75% {
+      background: rgb(255, 195, 0);
+  }
+  100% {
+      background: rgb(199, 60, 0);
+  }
+}
+
+body {
+  margin: 0; /* Removes default margin */
+  height: 100vh; /* Ensures body covers full height */
+  display: flex; /* Optional: center content if any */
+  justify-content: center; /* Optional: center content */
+  align-items: center; /* Optional: center content */
+  animation: gradient-animation 5s infinite; /* Apply animation to body */
+  background-size: 400% 400%; /* Optional: make the gradient smooth */
+}
+
+.container {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.027);
+  width: min(90%,  500px);
+  position: absolute;
+  transform: trasnlate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 4em 2em;
+  border-radius: 0.5em;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+}
+
+.sectionContainer {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.buttonContainer {
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  color: #a9a7a7;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.focusButton {
+  background-color: rgb(255, 106, 26);
+  color: azure;
+}
+
+.timeButtonContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+#time {
+  text-align: center;
+  color: azure;
+  font-size: 5em;
+  font-weight: 600;
+}
+
+#startButton, #pauseButton {
+  padding: 1em 2em;
+  border-radius: 0.5em;
+}
+
+#resetButton {
+  background-color: transparent;
+  border: none;
+  color: azure;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
